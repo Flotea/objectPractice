@@ -12,7 +12,15 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
     - add a key named `color` and set it to an array with two string elements in it
     - add a key named `speak` which will be a method that return a string "woof!"; 
  */ 
-
+var dog = {
+            name:"Baby",
+            age: 4,
+            vegeterian: false,
+            color: ["Grey", "White", "Orange"],
+            speak: function(){
+              return "woof!";
+            }
+          } 
 
  /*
  
@@ -20,10 +28,11 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
  
  "My dog `name` is `age` year old likes to `speak`."
  */
-
+console.log("My dog "+dog.name+" is "+dog.age+" years old and likes to "+ dog.speak()+ ".");
   /*
     3.  Declare a variable named `kicks` and assign it to an EMPTY object.
   */
+ var kicks = {};
  
   /*
     4.  Add the following properties to this object. Each property declaration expression will be on its own line and
@@ -33,12 +42,18 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
               - add a property named `size` and set it to your shoe size
               - add a property named `buy` and set it to a method that will return a string "Hell Yeah!"
 */
-  
+kicks.brand = "Dr.Scholls"
+kicks.color = "red"
+kicks.size =12;
+kicks.buy= function(){
+  return "Hell Yeah!";
+};
 /*
     5.  Complete the following:
             - Console.log the object.
             - Invoke the method set for the property 'buy'.
 */
+console.log(kicks.buy());
 
   /* 
     6. Declare a variable named `plainBox` and set its value to be an EMPTY object.
@@ -47,9 +62,16 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
               - add a property named `size` and set it to a number value between `0` and `20`.
               - add a property named `contents` and set it to be an empty array.
   */
+ var plainBox ={};
+ plainBox.color="Green";
+ plainBox.size= 10;
+ plainBox.contents=[];
 
   /* 7. Add 3 elements to your contents property in the plainBox object. */
-  
+  plainBox.contents[0]="sketchbook";
+  plainBox.contents[1]="lead pencil";
+  plainBox.contents[2]="eraser";
+  console.log(plainBox.contents);
   /*
      8. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
               - add a key named `model` and set its value to the name of an American car manufacturer.
@@ -58,10 +80,20 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
               - add a key named `driver` and set it to be `null`.
               - add a key named `passengers` and set it to be an empty array.
   */
+ var stockCar ={
+                model:"Ford",
+                year: 2002,
+                automaticTransmission: false,
+                driver: null,
+                passenger:[]
+               }
+  
   
   /* 
   9. Add 2 elements to the passengers property in the stockCar object.
  */
+stockCar.passenger[0]="Rachel";
+stockCar.passenger[1]="Lorelei";
 
   //building & defining key pairs inside of the object, use a colon (:), inside of the { }
   //assigning & modifying require equal signs (=)
